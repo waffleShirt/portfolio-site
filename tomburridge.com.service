@@ -1,0 +1,15 @@
+[Unit]
+Description=Portfolio-Site
+
+[Service]
+WorkingDirectory=/var/www/portfolio/
+ExecStart=/usr/bin/dotnet /var/www/portfolio/Portfolio.dll
+Restart=always
+RestartSec=10
+SyslogIdentifier=Portfolio-Site
+User=www-data
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
+
+[Install]
+WantedBy=multi-user.target
