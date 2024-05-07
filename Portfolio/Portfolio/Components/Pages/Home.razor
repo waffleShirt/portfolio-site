@@ -1,0 +1,273 @@
+﻿@page "/"
+
+<PageTitle>Tom Burridge - Portfolio Website</PageTitle>
+
+@* About Me Section *@
+<PageSection Title="About Me"
+             AnchorName="section-about">
+    <MudMarkdown Value="@_aboutMeText"></MudMarkdown>
+</PageSection>
+
+@* Education Section *@
+<PageSection Title="Education"
+             AnchorName="section-experience">
+    <Experience Title="Master of Science in Computer Science"
+                Location="Georgia University of Technology | Online"
+                When="August 2021 - May 2024"
+                ImageSource="https://brand.gatech.edu/sites/default/files/inline-images/GTVertical_RGB.png"
+                ImageLink="https://www.gatech.edu/"
+                AnchorName="gt">
+        <MudMarkdown Value="@_gtEducationMarkdown" />
+    </Experience>
+
+    <Experience Title="Bachelor of Computer Science in Games Technology"
+                Location="La Trobe University | Melbourne, Australia"
+                When="March 2011 - May 2014"
+                ImageSource="https://www.latrobe.edu.au/about/at-a-glance/ds-images/la-trobe-university-logo3.jpg/medium.jpg"
+                ImageLink="https://www.latrobe.edu.au/"
+                AnchorName="ltu">
+        <MudMarkdown Value="@_ltuEducationMarkdown" />
+    </Experience>
+
+    <Experience Title="Advanced Diploma of Professional Game Development"
+                Location="Academy of Interactive Entertainment | Melbourne, Australia"
+                When="2007 - 2008"
+                ImageSource="https://aieinstitute.edu.au/wp-content/uploads/2022/06/aie-favicon.png"
+                ImageLink="https://aie.edu.au/"
+                AnchorName="aie">
+        <MudMarkdown Value="@_aieEducationMarkdown" />
+    </Experience>
+</PageSection>
+
+@* Professional Experience Sections *@
+<PageSection Title="Professional Experience"
+             AnchorName="section-professional-experience">
+    <Experience Title="Vorsprung Tuning Hub | Whistler, British Columbia"
+                Location="Vorsprung Suspension"
+                AnchorName="tuninghub"
+                When="December 2021 - November 2023">
+        <MudMarkdown Value="@_tuningHubExperienceMarkdown" />
+        <MudGrid>
+            <MudItem sm="12" md="6" Class="d-flex justify-center flex-column">
+                <MudButton OnClick="@(() => OpenImageOverlay("/imgs/vorsprung/tuninghub/th_calc.png"))">
+                    <MudImage Src="/imgs/vorsprung/tuninghub/th_calc.png"
+                              Height="300" />
+                </MudButton>
+                <MudText Typo="Typo.subtitle2" Align="Align.Center">Damper tune calculator</MudText>
+            </MudItem>
+            <MudItem sm="12" md="6" Class="d-flex justify-center">
+                <MudSpacer />
+            </MudItem>
+        </MudGrid>
+    </Experience>
+
+    <Experience Title="Vorsprung Web Store Tools"
+                Location="Vorsprung Suspension | Whistler, British Columbia"
+                When="December 2021 - November 2023"
+                AnchorName="webstoretools">
+        <MudMarkdown Value="@_webstoreToolsExperienceMarkdown1"/>
+        <MudGrid Class="mb-2">
+            <MudItem sm="12" md="6" Class="d-flex justify-center flex-column">
+                <MudButton OnClick="@(() => OpenImageOverlay("/imgs/vorsprung/smashpot/smashpot_spring_calc.png"))">
+                    <MudImage Src="/imgs/vorsprung/smashpot/smashpot_spring_calc.png"
+                              Height="300" />
+                </MudButton>
+                <MudText Typo="Typo.subtitle2" Align="Align.Center">Smashpot spring rate calculator</MudText>
+            </MudItem>
+            <MudItem sm="12" md="6" Class="d-flex justify-center">
+                <MudSpacer />
+            </MudItem>
+        </MudGrid>
+
+        <MudMarkdown Value="@_webstoreToolsExperienceMarkdown2" />
+        <MudGrid Class="mb-2">
+            <MudItem sm="12" md="6" Class="d-flex justify-center flex-column">
+                <MudButton OnClick="@(() => OpenImageOverlay("/imgs/vorsprung/compat/compatibility_checker.png"))">
+                    <MudImage Src="/imgs/vorsprung/compat/compatibility_checker.png"
+                              Height="300" />
+                </MudButton>
+                <MudText Typo="Typo.subtitle2" Align="Align.Center">Product compatibility checker</MudText>
+            </MudItem>
+            <MudItem sm="12" md="6" Class="d-flex justify-center">
+                <MudSpacer />
+            </MudItem>
+        </MudGrid>
+        
+        <MudMarkdown Value="@_webstoreToolsExperienceMarkdown3" />
+        <MudGrid>
+            <MudItem sm="12" md="6" Class="d-flex justify-center flex-column">
+                <MudButton OnClick="@(() => OpenImageOverlay("/imgs/vorsprung/recommend/product_recommendations_1.png"))">
+                    <MudImage Src="/imgs/vorsprung/recommend/product_recommendations_1.png"
+                              Height="300" />
+                </MudButton>
+                <MudText Typo="Typo.subtitle2" Align="Align.Center">Product recommendations - initial view</MudText>
+            </MudItem>
+            <MudItem sm="12" md="6" Class="d-flex justify-center flex-column">
+                <MudButton OnClick="@(() => OpenImageOverlay("/imgs/vorsprung/recommend/product_recommendations_5.png"))">
+                    <MudImage Src="/imgs/vorsprung/recommend/product_recommendations_5.png"
+                              Height="300" />
+                </MudButton>
+                <MudText Typo="Typo.subtitle2" Align="Align.Center">Product recommendations - end result</MudText>
+            </MudItem>
+        </MudGrid>
+    </Experience>
+</PageSection>
+
+@* Projects Section *@
+<PageSection Title="Projects"
+             AnchorName="section-projects">
+    <Experience Title="Portfolio Website"
+                When="April 2024 - Ongoing"
+                AnchorName="portfolio">
+        <MudMarkdown Value="@_portfolioProjectMarkdown"/>
+    </Experience>
+
+    <Experience Title="Kleptocrat"
+                Location="Georgia Institute of Technology - CS6457 Video Game Design | Online"
+                When="January 2024 - April 2024"
+                AnchorName="kleptocrat">
+        <MudMarkdown Value="@_kleptocratExperienceMarkdown" />
+        <MudText Typo="Typo.h6"><strong>Trailer & Gameplay Video</strong></MudText>
+        <MudGrid>
+            <MudItem sm="12" md="6" Class="d-flex justify-center">
+                <iframe style="width:560px;height:315px;"
+                        src="https://www.youtube.com/embed/3mG2BrKkaPQ?si=t--8q1hsDHKt0Q6n"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+            </MudItem>
+            <MudItem sm="12" md="6" Class="d-flex justify-center">
+                <iframe style="width:560px;height:315px;"
+                        src="https://www.youtube.com/embed/M7NM7Ypx2NU?si=NT5zEDyqesE4A_CU"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+            </MudItem>
+        </MudGrid>
+    </Experience>
+
+    <Experience Title="Digital Lab Assistant"
+                Location="La Trobe University & Quantum Victoria | Melbourne, Australia"
+                When="March 2013 - May 2014"
+                AnchorName="dla">
+        <MudMarkdown Value="@_dlaExperienceMarkdown" />
+        <MudText Typo="Typo.h6"><strong>Screenshots</strong></MudText>
+        <MudText>
+            Digital Lab Assistant is no longer available on the App Store. Here are a few screenshots from the final product.
+        </MudText>
+        <MudGrid>
+            <MudItem sm="12" md="6" Class="d-flex justify-center flex-column">
+                <MudButton OnClick="@(() => OpenImageOverlay("/imgs/dla/dla_login_screen.png"))">
+                    <MudImage Src="/imgs/dla/dla_login_screen.png"
+                              Height="300" />
+                </MudButton>
+                <MudText Typo="Typo.subtitle2" Align="Align.Center">Login screen</MudText>
+            </MudItem>
+            <MudItem sm="12" md="6" Class="d-flex justify-center flex-column">
+                <MudButton OnClick="@(() => OpenImageOverlay("/imgs/dla/dla_mydla.png"))">
+                    <MudImage Src="/imgs/dla/dla_mydla.png"
+                              Height="300" />
+                </MudButton>
+                <MudText Typo="Typo.subtitle2" Align="Align.Center">"MyDLA" lab search and management</MudText>
+            </MudItem>
+            <MudItem sm="12" md="6" Class="d-flex justify-center flex-column">
+                <MudButton OnClick="@(() => OpenImageOverlay("/imgs/dla/dla_lab_editor_toolbox.png"))">
+                    <MudImage Src="/imgs/dla/dla_lab_editor_toolbox.png"
+                              Height="300" />
+                </MudButton>
+                <MudText Typo="Typo.subtitle2" Align="Align.Center">Lab editor with open widgets drawer</MudText>
+            </MudItem>
+            <MudItem sm="12" md="6" Class="d-flex justify-center flex-column">
+                <MudButton OnClick="@(() => OpenImageOverlay("/imgs/dla/dla_lab_viewer.png"))">
+                    <MudImage Src="/imgs/dla/dla_lab_viewer.png"
+                              Height="300" />
+                </MudButton>
+                <MudText Typo="Typo.subtitle2" Align="Align.Center">Lab Viewer with example widgets</MudText>
+            </MudItem>
+        </MudGrid>
+    </Experience>
+
+    <Experience Title="Tilde"
+                When="December 2013 - January 2014"
+                AnchorName="tilde">
+        <MudMarkdown Value="@_tildeExperienceMarkdown" />
+        <MudText Typo="Typo.h6"><strong>Screenshots</strong></MudText>
+        <MudText>
+            Unfortunately I do not currently have access to the original source for the application (it's likely on an old hard drive in storage in Australia) but
+            I did find a few screenshots of the UI while it was under development.
+        </MudText>
+        <MudGrid>
+            <MudItem sm="12" md="6" Class="d-flex justify-center flex-column">
+                <MudButton OnClick="@(() => OpenImageOverlay("/imgs/tilde/tilde_1.png"))">
+                    <MudImage Src="/imgs/tilde/tilde_1.png"
+                              Height="300" />
+                </MudButton>
+                <MudText Typo="Typo.subtitle2" Align="Align.Center">Example artist bio screen</MudText>
+            </MudItem>
+            <MudItem sm="12" md="6" Class="d-flex justify-center flex-column">
+                <MudButton OnClick="@(() => OpenImageOverlay("/imgs/tilde/tilde_2.png"))">
+                    <MudImage Src="/imgs/tilde/tilde_2.png"
+                              Height="300" />
+                </MudButton>
+                <MudText Typo="Typo.subtitle2" Align="Align.Center">Example product purchase screen</MudText>
+            </MudItem>
+        </MudGrid>
+    </Experience>
+</PageSection>
+
+@* Internships Section *@
+<PageSection Title="Internships"
+             AnchorName="section-internships">
+    <Experience Title="Programmer on Digital Laboratory Assistant"
+                Location="Quantum Victoria"
+                When="January 2014 - May 2014"
+                AnchorName="qv">
+        <MudMarkdown Value="@_dlaInternshipMarkdown"></MudMarkdown>
+    </Experience>
+
+    <Experience Title="Audio Programmer on Heroes Over Europe"
+                Location="Transmission Games"
+                When="September 2008 - December 2008"
+                AnchorName="hoe">
+        <MudMarkdown Value="@_hoeExperienceMarkdown" />
+        <MudText Typo="Typo.h6"><strong>Game Trailer</strong></MudText>
+        <MudGrid>
+            <MudItem sm="12" md="6" Class="d-flex justify-center">
+                <iframe style="width:560px;height:315px;"
+                        src="https://www.youtube.com/embed/K-vh42608NA?si=0qi0eE6ESkrMcg2x"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+            </MudItem>
+            <MudItem sm="12" md="6">
+                <MudSpacer />
+            </MudItem>
+        </MudGrid>
+    </Experience>
+</PageSection>
+
+@* Skills Section *@
+<PageSection Title="Skills"
+             ShowDivider="false"
+             AnchorName="section-skills">
+    <SkillList SkillsList="_skillList" />
+</PageSection>
+
+@* Full screen overlay for images *@
+<MudOverlay @bind-Visible="_imageOverlayOpen"
+            DarkBackground="true"
+            AutoClose="true"
+            OnClick="CloseImageOverlay">
+    <MudImage Src="@_overlayImagePath" />
+</MudOverlay>
+
+@code
+{
+
+}

@@ -1,0 +1,29 @@
+﻿<a id="@AnchorName"></a>
+<MudGrid Class="mb-2">
+    <MudItem md="1" Class="d-none d-md-block">
+        <MudLink Href="@ImageLink" Target="_blank">
+            <MudImage Src="@ImageSource"
+                      Fluid="true"
+                      ObjectFit="ObjectFit.Contain"/>
+        </MudLink>
+    </MudItem>
+    <MudItem sm="12" md="11">
+        <MudText Typo="Typo.h4"><strong>@Title</strong></MudText>
+        
+        @if (!string.IsNullOrEmpty(Location))
+        {
+            <MudText Typo="Typo.h6"><strong>Location: </strong>@Location</MudText>
+        }
+        
+        @if (!string.IsNullOrEmpty(When))
+        {
+            <MudText Typo="Typo.h6"><strong>When: </strong>@When</MudText>
+        }
+
+        @ChildContent
+    </MudItem>
+</MudGrid>
+
+@code {
+
+}

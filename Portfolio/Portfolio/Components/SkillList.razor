@@ -1,0 +1,17 @@
+﻿@using Portfolio.Skills
+
+@foreach (SkillSection skillSection in SkillsList.SkillSections)
+{
+    <MudText Typo="Typo.h4" Class="mb-2">@skillSection.SectionTitle</MudText>
+    foreach (Skills.Skill skill in skillSection.SkillList)
+    {
+        <Skill Name="@skill.Name"
+               Proficiency="@skill.Proficiency.ToDescriptionString()"
+               Description="@skill.Description"
+               Icon="@skill.Icon"/>
+    }
+}
+
+@code {
+
+}

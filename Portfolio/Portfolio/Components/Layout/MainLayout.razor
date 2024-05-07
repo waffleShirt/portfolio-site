@@ -1,0 +1,35 @@
+﻿@inherits LayoutComponentBase
+
+@* MudBlazor Components *@
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar>
+        <MudGrid>
+            <MudItem xs="9">
+                <MudText Typo="Typo.h3">Portfolio of Tom Burridge</MudText>
+            </MudItem>
+
+            <MudItem Class="d-flex justify-end" xs="3">
+                <Contact/>
+            </MudItem>
+        </MudGrid>
+    </MudAppBar>
+    @* <MudDrawer Open="true"> *@
+
+    @* </MudDrawer> *@
+
+    <MudMainContent>
+        <MudContainer MaxWidth="MaxWidth.Large">
+            @Body
+        </MudContainer>
+    </MudMainContent>
+    
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+</MudLayout>
